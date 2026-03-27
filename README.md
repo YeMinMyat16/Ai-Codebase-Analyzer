@@ -3,7 +3,12 @@
 An automated local codebase visualization and analysis tool powered by **FastAPI**, **Streamlit**, and **Ollama**.
 This tool allows you to recursively scan any local repository, generate detailed file-level architectural summaries using local LLMs (like `qwen2.5-coder` or `llama3`), and interactively ask questions about your code!
 
-*(You can add a screenshot here by saving an image file like `screenshot.png` in this folder and adding `![App Screenshot](screenshot.png)` to this file!)*
+<div align="center">
+  <img src="Screenshots/Screenshot%202026-03-27%20221213.png" alt="App Screenshot" width="800">
+  <br>
+  <br>
+  <img src="Screenshots/Screenshot%202026-03-27%20224203.png" alt="Analysis Results" width="800">
+</div>
 
 ## ✨ Features
 - **Local AI Privacy**: Your code never leaves your machine! It connects directly to your local Ollama instance.
@@ -47,10 +52,3 @@ python -m streamlit run app.py
 ```
 Then, open your browser to `http://localhost:8501`.
 
-## 📸 How to Add Screenshots
-To add screenshots to this README:
-1. Save your screenshot image (e.g., `analyzer-ui.png`) directly into your project folder.
-2. Open this `README.md` file in an editor.
-3. Add the following line of code wherever you want the image to appear:
-`![My App UI](analyzer-ui.png)`
-4. Commit and push the changes to GitHub!
