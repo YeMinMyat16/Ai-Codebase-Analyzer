@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Codebase Analyzer</title>
+    <!-- Tailwind CSS with Typography plugin for rendering Markdown -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Phosphor Icons for elegant icons without SVG clutter -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-white flex min-h-screen overflow-hidden">
+
+    <!-- Sidebar Component Root -->
+    <div id="sidebar-root"></div>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-64 flex flex-col h-screen overflow-y-auto relative">
+        <!-- Dashboard Component Root -->
+        <div id="dashboard-root" class="p-10 pb-32">
+            <!-- Loading state by default -->
+            <div class="h-full flex items-center justify-center text-gray-500">
+                <i class="ph ph-circle-notch animate-spin text-4xl mb-4"></i>
+                <p>Waiting for analysis...</p>
+            </div>
+        </div>
+
+        <!-- ChatBar Component Root -->
+        <div id="chatbar-root"></div>
+    </main>
+
+    <!-- Component Modules -->
+    <script src="/js/components/Sidebar.js"></script>
+    <script src="/js/components/Dashboard.js"></script>
+    <script src="/js/components/ChatBar.js"></script>
+    <!-- Main Application Logic -->
+    <script src="/js/app.js"></script>
+
+</body>
+</html>
